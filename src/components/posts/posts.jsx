@@ -5,6 +5,10 @@ function Posts(props) {
     return (
         <div className="posts">
             <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            
         </div>
     );
 }

@@ -1,0 +1,81 @@
+.login{
+   
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover ;
+    font-family: 'Merriweather', serif;
+    background-image: url(blog-music.jpg);
+}
+
+.loginTitle{
+    font-size: 60px;  
+    color: rgb(255, 254, 253);
+}
+
+.loginForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm > label {
+    margin: 10px 0;
+    color: white;
+    font-size: 25px;
+   
+  }
+
+.loginInput{
+    padding: 10px;
+    border-radius: 10px;
+    color: white; 
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+    border-bottom: 1px solid white;
+}
+
+.loginInput:focus {
+    outline: none;
+}
+
+.loginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    border: black;
+    border-radius: 10px;
+    align-self: center;
+    font-size: 20px;  
+}
+
+button.loginButton:hover{
+    border-color: #e7e7e7;
+    color:rgb(0, 0, 0);
+}
+
+.loginRegisterButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    border: black;
+    border-radius: 10px;
+    align-self: center;
+    font-size: 20px; 
+}
+
+button.loginRegisterButton:hover{
+    border-color: #e7e7e7;
+    color:rgb(0, 0, 0);
+}

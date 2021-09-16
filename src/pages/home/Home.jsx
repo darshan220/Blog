@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Home.css"
-import Header from '../../header/header';
-import Posts from '../../posts/posts';
-import Sidebar from '../../sidebar/sidebar';
+import Header from '../../components/header/header';
+import Posts from '../../components/posts/posts';
+import Sidebar from '../../components/sidebar/sidebar';
 
 function Home(props) {
     return (
@@ -10,6 +10,7 @@ function Home(props) {
             <Header/>
             <div className="home">
                <Posts/>
+            
                <Sidebar/>
             </div>
         </>

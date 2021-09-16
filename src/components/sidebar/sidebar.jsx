@@ -31,7 +31,7 @@ function sidebar(props) {
                     <i className="sidebarIcon fab fa-facebook"></i>
                     <i className="sidebarIcon fab fa-twitter"></i>
                     <i className="sidebarIcon fab fa-pinterest"></i>
-                    <i className="sidebarIcon fab fa-instagram"></i>
+                    <i class="sidebarIcon fab fa-instagram-square"></i>
                 </div>
             </div>
         </div>
