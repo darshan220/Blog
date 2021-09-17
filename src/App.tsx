@@ -8,10 +8,11 @@ import Settings from './pages/settings/Settings';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { logDOM } from '@testing-library/dom';
 
 function App() {
 
-  const user = false;
+  // const user = false;
 
   return (
     <Router>
@@ -19,29 +20,30 @@ function App() {
 
         <Switch>
 
-          <Route exact path="/">
-            <Home/>
-          </Route>
-
-          <Route path="/Register">
-              {user ? <Home/> : <Register/>}
-          </Route>
-
+  
           <Route path="/Login">
-              {user ? <Home/> : <Login/>}
+              <Login/>
+          </Route>
+
+           <Route exact path="/">
+              <Register/>
+          </Route>
+
+          <Route path="/Home">
+              <Home/> 
           </Route>
 
           <Route path="/Write">
-              {user ? <Write/> : <Register/>}
+               <Write/> 
           </Route>
 
-          <Route path="/Settings">
-              {user ? <Settings/> : <Register/>}
-          </Route>
+           <Route path="/Settings">
+               <Settings/> 
+          </Route> 
 
-          <Route path="/post/:postId">
+           <Route path="/post/:postId">
             <Single/>
-          </Route>
+          </Route>  
 
         </Switch>
     </Router>

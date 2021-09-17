@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Write.css"
-function Write(props) {
+
+function Write() {
+
     return (
         <div className="write">
             <img className="writeImg" src="https://images.unsplash.com/photo-1511025998370-7d59f82e9c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80" alt=""/>

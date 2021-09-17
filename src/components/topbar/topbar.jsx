@@ -4,7 +4,8 @@ import "./topbar.css"
 
 function Topbar(props) {
     
-    const user = false;
+    // const user = true;
+
     return (
         <div className="top">
             <div className="topLeft">
@@ -19,10 +20,11 @@ function Topbar(props) {
                         <li className="topListItem"><Link className="link" to="/">ABOUT</Link></li>
                         <li className="topListItem"><Link className="link" to="/">CONTACT</Link></li>
                         <li className="topListItem"><Link className="link" to="/Write">WRITE</Link></li>
-                        <li className="topListItem">{user && "LOGOUT"}</li>
+                        {/* <li className="topListItem">{user && "LOGOUT"}</li> */}
+                        <li className="topListItem"><Link className="link" to="/">LOGOUT</Link></li>
                     </ul>
             </div>
-            <div className="topRight">
+            {/* <div className="topRight">
                 {
                     user ? (
                         <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/06/world-music-day-1624241072.jpg" className="topImg"></img>
@@ -40,7 +42,10 @@ function Topbar(props) {
                         </li>
                     </ul>
                     )
-                }
+                } */}
+
+                <div className="topRight">
+                <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/06/world-music-day-1624241072.jpg" className="topImg"></img>
                 <i class="topSearchIcon fas fa-search"></i>
             </div>
         </div>
