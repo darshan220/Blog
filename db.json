@@ -1,9 +1,63 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "data": [
+    {
+      "id": 1,
+      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "headOne": "Music",
+      "headTwo": "Life",
+      "mainHead": "Feel the beat",
+      "timing": "1 hour ago",
+      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "headOne": "Music",
+      "headTwo": "Life",
+      "mainHead": "Feel the beat",
+      "timing": "1 hour ago",
+      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "headOne": "Music",
+      "headTwo": "Life",
+      "mainHead": "Feel the beat",
+      "timing": "1 hour ago",
+      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+    },
+    {
+      "mainhead": "darshan",
+      "desc": "patel",
+      "id": 4
+    },
+    {
+      "mainHead": " Rest Api ",
+      "desc": " In React, there are various ways we can consume REST APIs in our applications, these ways include using the JavaScript inbuilt fetch() method and Axios which is a promise-based HTTP client for the browser and Node. js.",
+      "id": 5
+    },
+    {
+      "mainHead": " darshan",
+      "desc": " dadadonaowndoawbndiawbdiwabfiawhbfiabfaiofbaiwf",
+      "id": 6
+    },
+    {
+      "mainHead": " undefined",
+      "desc": " undefined",
+      "id": 7
+    },
+    {
+      "mainHead": " undefined",
+      "desc": " undefined",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "darshan",
+      "email": "darshan@123"
+    }
+  ]
+}

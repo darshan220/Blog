@@ -8,7 +8,7 @@ import Settings from './pages/settings/Settings';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { logDOM } from '@testing-library/dom';
+
 
 function App() {
 
@@ -19,8 +19,7 @@ function App() {
       <Topbar/>  
 
         <Switch>
-
-  
+          
           <Route path="/Login">
               <Login/>
           </Route>

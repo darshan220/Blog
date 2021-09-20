@@ -33,12 +33,11 @@ function Login(props) {
        
     }
 
-
     return (
         <div className="login">
             <span className="loginTitle">Login</span>
             <form action="" className="loginForm">
-                <label>Email</label>
+                <label>UserName</label>
                 <input 
                     className="loginInput" 
                     type="text" 
@@ -54,7 +53,7 @@ function Login(props) {
                     value={auth.password}
                     onChange={(e)=> setAuth({...auth,password: e.target.value})}/>
 
-                <button className="loginButton" onClick={(e)=> Onsubmit(e)}>Login</button>
+                <button className="loginButton" onClick={(e)=> Onsubmit(e)}>LOGIN</button>
             </form>
             <button className="loginRegisterButton" onClick={(e)=> OnRegister(e)}>
                 REGISTER
