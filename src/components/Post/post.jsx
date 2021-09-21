@@ -1,42 +1,44 @@
-import React from 'react';
-import './post.css'
-import { data } from '../../data.js';
+import React, { useEffect, useState } from "react";
+import "./post.css";
+import {useHistory} from 'react-router-dom'
 
-function post(props) {
+function Post() {
+  const axios = require("axios");
+  const history = useHistory()
+  const [showPost, setShowPost] = useState([]);
 
-    
+  const getPost = () => {
+    axios.get("http://localhost:3000/data").then((response) => {
+      console.log(response);
+      setShowPost(response.data);
+      const img = URL.revokeObjectURL("blob:http://localhost:3000/7a5d3246-92a9-4629-b7b9-4b2fdfd65459")
+      console.log(img); 
+    });
+   
+  };
 
-    return (<>
-        { data.map((blog)=>{
+  useEffect(() => getPost(), []);
 
-const { imgUrl, headOne, headTwo, mainHead, timing , desc } = blog;
-
-    
-       return ( <div className="post">
-            <img className="postImg" 
-            src={imgUrl}>
-            </img>
+  const OnTitle = () => {
+    history.push('/post')
+  }
+  
+  return (
+    <>
+      {showPost.map((blog) => {
+        return (
+          <div className="post">
+            <img className="postImg" src={blog.imgUrl}></img>
             <div className="postInfo">
-                <div className="postCats">
-                    <span className="postCat">Music</span>
-                    <span className="postCat">Life</span>
-                </div>
-                <span className="postTitle">
-                    Feel the beat
-                </span>
-                {/* <hr/> */}
-                <span className="postDate">1 hour ago</span>
+              <span className="postTitle" onClick={OnTitle}>{blog.mainHead}</span>
+              <span className="postDate">{blog.timing}</span>
             </div>
-            <p className="postDesc">
-                Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.
-                From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter.
-            </p>
-        </div> 
-       )
-        })    
-    }
-        </>
-    );
+            <p className="postDesc">{blog.desc}</p>
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
-export default post;
+export default Post;

@@ -29,6 +29,7 @@
     border: none;
     padding: 20px;
     width: 70vw;
+  
 }
 
 .writeInput:focus{
@@ -60,6 +61,7 @@
 
 .writeText{
     font-size: 25px;
-    height: 100vh;
+    height: 20vh;
     margin-left: 18px;
+    padding-left: 130px;
 }
