@@ -64,7 +64,7 @@ function Topbar(props) {
 
                 <div className="topRight">
                 <img src={userImg} className="topImg"></img>
-                <i class="topSearchIcon fas fa-search"></i>
+                <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
     );

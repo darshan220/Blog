@@ -40,7 +40,7 @@ function App() {
                <Settings/> 
           </Route> 
 
-           <Route path="/post/:postId">
+           <Route path="/post">
             <Single/>
           </Route>  
 

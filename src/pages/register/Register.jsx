@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import "./Register.css"
 // import Login from '../login/Login';
 import {useHistory} from 'react-router-dom'
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function Register() {
 
@@ -19,10 +22,10 @@ function Register() {
   
         e.preventDefault();
         console.log(user);
-        const newUser = Object.entries(user)
 
+        // const newUser = Object.entries(user)
         // setStoreUser(Object.entries(newUser),...storeUser)
-        localStorage.setItem("BlogUser",JSON.stringify(user))
+        // localStorage.setItem("BlogUser",JSON.stringify(user))
 
         var a = document.forms['form']['u_name'].value;
         var b = document.forms['form']['email'].value;
@@ -33,9 +36,18 @@ function Register() {
             alert("Enter your information....")
         }
         else{
-            alert(`Thank you for registration: ${user.username}`)
-            history.push('/Login')
-           
+            axios.post('http://localhost:3000/users',{
+                
+                "username": `${user.username}`,
+                "email":    `${user.email}`,
+                "password": `${user.password}`,
+            })
+            .then(function(response){
+                console.log(response);
+                // alert(`Thank you for registration: ${user.username}`)
+                toast(`successfully registered: ${user.username}`,{position: "top-right", type: "success"});
+                history.push('/Login')
+           })
         }
     }
 
@@ -86,6 +98,7 @@ function Register() {
                 <button className="registerButton" type="submit" onClick={(e)=> OnSubmit(e,user)}> 
                     REGISTER
                 </button>
+                <ToastContainer />
                 
             </form>
             <button className="registerLoginButton" onClick={OnLogin}> 
