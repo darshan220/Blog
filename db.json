@@ -1,9 +1,65 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+  "data": [
+    {
+      "id": 1,
+      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "headOne": "Music",
+      "headTwo": "Life",
+      "mainHead": "Feel the beat",
+      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+    },
+    {
+      "imgUrl": "blob:http://localhost:3000/ea20d969-e0de-490f-98d6-b7734510bd0d",
+      "mainHead": " dfgd",
+      "desc": " gdfgdf",
+      "id": 2
+    },
+    {
+      "imgUrl": "blob:http://localhost:3000/ee9591e8-a52b-41ab-8685-07702b6c5b46",
+      "mainHead": " qweqwe",
+      "desc": " qweqwe",
+      "id": 3
+    },
+    {
+      "imgUrl": "blob:http://localhost:3002/749b7c05-e94d-4936-97c9-4726263a5c66",
+      "mainHead": " dadadawd",
+      "desc": " awdadawdadwada",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "darshan",
+      "email": "darshan213@gmail.com",
+      "password": "abcdefg"
+    },
+    {
+      "username": "sagar",
+      "email": "sagar123@gmail.com",
+      "password": "123456789",
+      "id": 27
+    },
+    {
+      "username": "hiren",
+      "email": "danpatel22@gmail.com",
+      "password": "123456789",
+      "id": 28
+    }
+  ],
+  "image": [
+    {
+      "id": 1,
+      "imgUrl": ""
+    },
+    [
+      {
+        "imgUrl": "URL"
+      }
     ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+    {
+      "imgUrl": "blob:http://localhost:3002/ed70038d-b452-48e4-8a01-a7049ba4e7ee",
+      "id": 3
+    }
+  ]
+}

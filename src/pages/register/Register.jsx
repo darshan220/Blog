@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import "./Register.css"
-// import Login from '../login/Login';
 import {useHistory} from 'react-router-dom'
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Register.css"
 
 function Register() {
 
@@ -13,27 +14,17 @@ function Register() {
     })
     
     const history = useHistory()
+
     // const [storeUser,setStoreUser] = useState([])
     
-    // const handleChange = (e) => {
-        //         if(e.target.username === "user"){
-            //             setUser(e.target.value)
-            //         }else if(e.target.email === "user"){
-                //             setUser(e.target.value)
-                //         }else{
-                    //             setUser(e.target.value)
-                    //         }
-                    // }
-                    
-
     const OnSubmit = (e) => {   
   
         e.preventDefault();
         console.log(user);
-        const newUser = Object.entries(user)
 
+        // const newUser = Object.entries(user)
         // setStoreUser(Object.entries(newUser),...storeUser)
-        localStorage.setItem("BlogUser",JSON.stringify(user))
+        // localStorage.setItem("BlogUser",JSON.stringify(user))
 
         var a = document.forms['form']['u_name'].value;
         var b = document.forms['form']['email'].value;
@@ -44,9 +35,19 @@ function Register() {
             alert("Enter your information....")
         }
         else{
-            alert(`Thank you for registration: ${user.username}`)
-            history.push('/Login')
-           
+            axios.post('http://localhost:3000/users',{
+                
+                "username": `${user.username}`,
+                "email":    `${user.email}`,
+                "password": `${user.password}`,
+            })
+            .then(function(response){
+                console.log(response);
+                alert(`Thank you for registration: ${user.username}`)
+                localStorage.setItem('blogUser',JSON.stringify(response.data))
+                // toast(`successfully registered: ${user.username}`,{position: "top-right", type: "success"});
+                history.push('/Login')
+           })
         }
     }
 
@@ -97,6 +98,8 @@ function Register() {
                 <button className="registerButton" type="submit" onClick={(e)=> OnSubmit(e,user)}> 
                     REGISTER
                 </button>
+                <ToastContainer />
+                
             </form>
             <button className="registerLoginButton" onClick={OnLogin}> 
                 LOGIN
