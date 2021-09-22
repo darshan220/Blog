@@ -7,7 +7,7 @@
     justify-content: center;
     background-size: cover ;
     font-family: 'Merriweather', serif;
-    background-image: url(blog-register.jpg);
+    background-image: url(../../assect/register-bg.jpg);
 }
 
 .registerTitle{

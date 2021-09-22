@@ -11,23 +11,29 @@ function Write() {
     console.log(e);
     console.log(e.target.files, "event");
     setFile(URL.createObjectURL(e.target.files[0]));
-    
+
+    // localStorage.setItem('Blog-Image',URL.createObjectURL(e.target.files[0]))
   };
+
+  console.log(file);
   
   const handleClick = (e)=>{
-    const imageData = new FormData()
-    imageData.append("imgUrl",file, file.name)
-    console.log(imageData);
+
+    // const imageData = new FormData()
+    // imageData.append("imgUrl",file, file.name)
+    // console.log(imageData);
+    
+    // localStorage.getItem('Blog-Image')
 
     axios.post('http://localhost:3000/data',
     {
       "imgUrl" : `${file}`,
       "mainHead": ` ${info.title}`,
       "desc": ` ${info.description}`,
-     })
+    })
      .then(function (response){
        console.log(response);
-     })
+    })
 
     }
 

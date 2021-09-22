@@ -7,7 +7,7 @@
     justify-content: center;
     background-size: cover ;
     font-family: 'Merriweather', serif;
-    background-image: url(login.jpeg);
+    background-image: url(../../assect/login-bg.jpeg);
 }
 
 .loginTitle{

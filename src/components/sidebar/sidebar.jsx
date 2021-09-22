@@ -1,12 +1,24 @@
 import React from 'react';
 import './sidebar.css'
+import sideBar from '../../assect/sidebar-profile.jpeg'
 
 function sidebar(props) {
+    function OnFacebook()  {
+        window.location.href ='https://www.facebook.com'
+    }
+
+    function OnTwitter()  {
+        window.location.href ='https://twitter.com'
+    }
+   
+    function OnInstagram()  {
+        window.location.href ='https://www.instagram.com'
+    }
     return (
         <div className="sidebar">
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT ME</span>
-                <img className="sidebarImg" src="https://images.unsplash.com/photo-1573807814050-f424a65d94ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt=""/>
+                <img className="sidebarImg" src={sideBar} alt=""/>
 
                 <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -28,10 +40,18 @@ function sidebar(props) {
             <div className="sidebarItem">
                 <span className="sidebarTitle">FOLLOW US</span>
                 <div className="sidebarSocial">
-                    <i className="sidebarIcon fab fa-facebook"></i>
-                    <i className="sidebarIcon fab fa-twitter"></i>
-                    <i className="sidebarIcon fab fa-pinterest"></i>
-                    <i className="sidebarIcon fab fa-instagram-square"></i>
+                    <div onClick={() =>  OnFacebook()}>
+                        <i className="sidebarIcon  fab fa-facebook" />
+                    </div>
+
+                    <div onClick={() =>  OnTwitter()}>
+                        <i className="sidebarIcon  fab fa-twitter"></i>
+                    </div>
+
+                    <div onClick={() =>  OnInstagram()}>
+                        <i className="sidebarIcon  fab fa-instagram-square"></i>
+                    </div>
+
                 </div>
             </div>
         </div>

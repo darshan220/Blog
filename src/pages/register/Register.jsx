@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "./Register.css"
-// import Login from '../login/Login';
 import {useHistory} from 'react-router-dom'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Register.css"
 
 function Register() {
 
@@ -44,8 +43,9 @@ function Register() {
             })
             .then(function(response){
                 console.log(response);
-                // alert(`Thank you for registration: ${user.username}`)
-                toast(`successfully registered: ${user.username}`,{position: "top-right", type: "success"});
+                alert(`Thank you for registration: ${user.username}`)
+                localStorage.setItem('blogUser',JSON.stringify(response.data))
+                // toast(`successfully registered: ${user.username}`,{position: "top-right", type: "success"});
                 history.push('/Login')
            })
         }

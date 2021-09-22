@@ -70,7 +70,7 @@
 
 .settingsForm > input{
     border: none;
-    color: gray;
+    color: rgb(0, 0, 0);
     margin: 10px 0;
     height: 30px;
     border-bottom: 1px solid gray;
