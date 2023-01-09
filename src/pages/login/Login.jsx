@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import "./Login.css"
-import { Link } from "react-router-dom";
-import {useHistory} from 'react-router-dom'
 import axios from 'axios';
+import {useHistory} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Login.css"
 
 function Login(props) {
 
@@ -23,19 +22,23 @@ function Login(props) {
 
     const Onsubmit = (e) => {
         e.preventDefault()
+
         // const login = JSON.parse(localStorage.getItem('BlogUser'))
         // console.log(login);
         // const data = login.map((person)=> `${person.username}`)
         // console.log(data)
 
         axios.get(`http://localhost:3000/users?username=${auth.username}&password=${auth.password}`)
+            
             .then((response)=> {
                 console.log(response);
                 const loginInfo = response.data
                 setLoginData(loginInfo)
+
                 if(response.data.length !== 0){
                     history.push('/Home')
                     toast("Welcome",{position: "top-right", type: "success"});
+                    
                 }
                 else{
                     // alert("please enter valid username and password")
