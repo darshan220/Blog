@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-// component
-
-//constants
-import { data } from "../../data.js";
-//css
 import "./Write.css";
 
 function Write() {
@@ -19,15 +14,21 @@ function Write() {
     
   };
   
-  console.log(file);
-  const handleClick = ()=>{
-    axios.post('http://localhost:3004/data', {
+  const handleClick = (e)=>{
+    const imageData = new FormData()
+    imageData.append("imgUrl",file, file.name)
+    console.log(imageData);
+
+    axios.post('http://localhost:3000/data',
+    {
+      "imgUrl" : `${file}`,
       "mainHead": ` ${info.title}`,
-      "desc": ` ${info.description}`
+      "desc": ` ${info.description}`,
      })
      .then(function (response){
        console.log(response);
      })
+
     }
 
   return (

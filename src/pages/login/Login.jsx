@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import "./Login.css"
 import { Link } from "react-router-dom";
 import {useHistory} from 'react-router-dom'
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function Login(props) {
 
@@ -9,28 +12,37 @@ function Login(props) {
         username:'',
         password: '',
     })
+
+    const [loginData,setLoginData] = useState()
+
     const history = useHistory()
 
     const OnRegister = () => {
         history.push('/')
-    }
+    }    
 
     const Onsubmit = (e) => {
         e.preventDefault()
-        const login = JSON.parse(localStorage.getItem('BlogUser'))
-        console.log(login);
+        // const login = JSON.parse(localStorage.getItem('BlogUser'))
+        // console.log(login);
         // const data = login.map((person)=> `${person.username}`)
         // console.log(data)
-        if (auth.username === login.username)
-        {
-            setAuth(history.push('/Home'))
-        }
-        else{
-            alert("you have not registered yet..go to registration page")
-            history.push('/')
-        }
 
-       
+        axios.get(`http://localhost:3000/users?username=${auth.username}&password=${auth.password}`)
+            .then((response)=> {
+                console.log(response);
+                const loginInfo = response.data
+                setLoginData(loginInfo)
+                if(response.data.length !== 0){
+                    history.push('/Home')
+                    toast("Welcome",{position: "top-right", type: "success"});
+                }
+                else{
+                    // alert("please enter valid username and password")
+                    toast("please enter valid username and password",{position: "top-right", type: "warning"});
+                    
+                }
+            })
     }
 
     return (
@@ -54,6 +66,7 @@ function Login(props) {
                     onChange={(e)=> setAuth({...auth,password: e.target.value})}/>
 
                 <button className="loginButton" onClick={(e)=> Onsubmit(e)}>LOGIN</button>
+                <ToastContainer />
             </form>
             <button className="loginRegisterButton" onClick={(e)=> OnRegister(e)}>
                 REGISTER

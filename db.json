@@ -10,54 +10,72 @@
       "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
     },
     {
-      "id": 2,
-      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-      "headOne": "Music",
-      "headTwo": "Life",
-      "mainHead": "Feel the beat",
-      "timing": "1 hour ago",
-      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+      "imgUrl": "blob:http://localhost:3000/ea20d969-e0de-490f-98d6-b7734510bd0d",
+      "mainHead": " dfgd",
+      "desc": " gdfgdf",
+      "id": 2
     },
     {
-      "id": 3,
-      "imgUrl": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-      "headOne": "Music",
-      "headTwo": "Life",
-      "mainHead": "Feel the beat",
-      "timing": "1 hour ago",
-      "desc": "Everyone who heard the music was seized by curiosity and went up the mountain. And the conductor of this strange orchestra gave the order, and the musicians began to play.From their instruments came small, playful musical notes, that rose and rose into the clouds. The music was so joyous, happy and fun, and the notes started playing with with the clouds' soft, fluffy bellies, running here and three, up and down, and the whole sky turned into one big game of tickle torture. Before long, the giant clouds were thundering with laughter."
+      "imgUrl": "blob:http://localhost:3000/ee9591e8-a52b-41ab-8685-07702b6c5b46",
+      "mainHead": " qweqwe",
+      "desc": " qweqwe",
+      "id": 3
     },
     {
-      "mainhead": "darshan",
-      "desc": "patel",
+      "imgUrl": "blob:http://localhost:3000/7a5d3246-92a9-4629-b7b9-4b2fdfd65459",
+      "mainHead": " blog",
+      "desc": " example",
       "id": 4
     },
     {
-      "mainHead": " Rest Api ",
-      "desc": " In React, there are various ways we can consume REST APIs in our applications, these ways include using the JavaScript inbuilt fetch() method and Axios which is a promise-based HTTP client for the browser and Node. js.",
+      "imgUrl": {},
+      "mainHead": " fsdf",
+      "desc": " dsfdf",
       "id": 5
     },
     {
-      "mainHead": " darshan",
-      "desc": " dadadonaowndoawbndiawbdiwabfiawhbfiabfaiofbaiwf",
+      "imgUrl": "blob:http://localhost:3003/c6351b30-9170-467f-aef0-c1b0567ccb47",
+      "mainHead": " sdfsdsdfdsfsd",
+      "desc": " sdfsdfsdfsdfsd",
       "id": 6
     },
     {
-      "mainHead": " undefined",
-      "desc": " undefined",
+      "imgUrl": "blob:http://localhost:3003/c9a0a17e-b136-482d-a4d9-3765a917c7e2",
+      "mainHead": " errrerer",
+      "desc": " reeererr",
       "id": 7
-    },
-    {
-      "mainHead": " undefined",
-      "desc": " undefined",
-      "id": 8
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "darshan",
-      "email": "darshan@123"
+      "username": "darshan",
+      "email": "darshan213@gmail.com",
+      "password": "abcdefg"
+    },
+    {
+      "username": "sahil",
+      "email": "sahil123@gmail.com",
+      "password": "1234567890",
+      "id": 24
+    },
+    {
+      "username": "hiren",
+      "email": "hiren123@gmail.com",
+      "password": "123",
+      "id": 25
+    },
+    {
+      "username": "hitesh",
+      "email": "hitesh123@gmail.com",
+      "password": "12345678",
+      "id": 26
+    },
+    {
+      "username": "sagar",
+      "email": "sagar123@gmail.com",
+      "password": "123456789",
+      "id": 27
     }
   ]
 }
