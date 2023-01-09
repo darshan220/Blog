@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
 import "./Register.css"
 // import Login from '../login/Login';
 import {useHistory} from 'react-router-dom'
@@ -13,19 +12,9 @@ function Register() {
     })
     
     const history = useHistory()
+
     // const [storeUser,setStoreUser] = useState([])
     
-    // const handleChange = (e) => {
-        //         if(e.target.username === "user"){
-            //             setUser(e.target.value)
-            //         }else if(e.target.email === "user"){
-                //             setUser(e.target.value)
-                //         }else{
-                    //             setUser(e.target.value)
-                    //         }
-                    // }
-                    
-
     const OnSubmit = (e) => {   
   
         e.preventDefault();
@@ -97,6 +86,7 @@ function Register() {
                 <button className="registerButton" type="submit" onClick={(e)=> OnSubmit(e,user)}> 
                     REGISTER
                 </button>
+                
             </form>
             <button className="registerLoginButton" onClick={OnLogin}> 
                 LOGIN

@@ -5,10 +5,7 @@ import Post from '../Post/post';
 function Posts() {
     return (
         <div className="posts">
-            <Post/>
-        =
-          
-            
+            <Post/>   
         </div>
     );
 }
